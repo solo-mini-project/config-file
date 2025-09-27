@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: auth-service
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          issuer-uri: http://keycloak:8080/realms/rest-api
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://discovery-service:8761/eureka/
+
+keycloak:
+  server-url: http://keycloak:8080
+  realm: rest-api
+  client-id: oauth-admin-client
+  client-secret: Re1iIXFYOyiZL0JXqQ8Cwe8P4yjt4ttc
+
+minio:
+  url: http://minio:9000
+  access-name: minioadmin
+  access-secret: minioadmin123
+  bucket-name: mini-project
